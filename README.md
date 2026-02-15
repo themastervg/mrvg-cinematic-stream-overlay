@@ -10,6 +10,7 @@
 <img src="https://img.shields.io/github/stars/themastervg/mrvg-cinematic-stream-overlay?style=for-the-badge&color=22d3ee"/>
 <img src="https://img.shields.io/github/forks/themastervg/mrvg-cinematic-stream-overlay?style=for-the-badge&color=0ea5e9"/>
 <img src="https://komarev.com/ghpvc/?username=themastervg&repo=mrvg-cinematic-stream-overlay&label=Visitors&color=22d3ee&style=for-the-badge"/>
+<img src="https://img.shields.io/github/contributors/themastervg/mrvg-cinematic-stream-overlay?style=for-the-badge&color=22d3ee&label=Contributors"/>
 
 </p>
 
@@ -69,6 +70,7 @@ Everything editable from StreamElements widget settings:
 No code editing required.
 
 ---
+
 # ⬇ Download Overlay Files
 
 <p align="center">
@@ -116,6 +118,7 @@ Done.
 - Optimized for streaming  
 
 ---
+
 # 🔍 Keywords
 
 StreamElements Overlay  
@@ -129,6 +132,7 @@ Subscriber Alert Bar
 Tip Alert Overlay  
 
 ---
+
 # 👑 Creator
 
 <p align="center">
@@ -148,6 +152,7 @@ Tip Alert Overlay
 </p>
 
 ---
+
 ## ⭐ Support the Project
 If this overlay helps your stream:
 
@@ -161,4 +166,20 @@ Your support helps create more free tools.
 
 <p align="center">
 Built for streamers who want a cinematic streaming experience
+</p>
+
+---
+
+# 👑 Contributors
+
+Thanks to everyone supporting this project.
+
+<p align="center">
+<a href="https://github.com/themastervg">
+<img src="https://contrib.rocks/image?repo=themastervg/mrvg-cinematic-stream-overlay"/>
+</a>
+</p>
+
+<p align="center">
+Want to contribute? Open issues, suggest features or submit improvements.
 </p>

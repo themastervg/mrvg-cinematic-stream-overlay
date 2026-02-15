@@ -1,0 +1,41 @@
+name: Bug Report
+description: Report a problem or broken feature
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Please fill all details.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the issue clearly
+      placeholder: Overlay not showing / animation not working etc
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Added widget
+        2. Opened OBS
+        3. Error happened
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser/Platform
+      placeholder: Chrome / OBS / StreamElements
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Extra info or screenshot
+      placeholder: Add screenshot if possible

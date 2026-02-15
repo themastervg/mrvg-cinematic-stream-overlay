@@ -1,0 +1,30 @@
+name: Feature Request
+description: Suggest new feature or improvement
+title: "[FEATURE] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Suggest a new feature for MRVG overlay.
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: Feature idea
+      description: What feature should be added?
+      placeholder: Example add goal bar / color themes / etc
+    validations:
+      required: true
+
+  - type: textarea
+    id: benefit
+    attributes:
+      label: Why is this useful?
+      placeholder: Helps streamers because...
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Extra notes
+      placeholder: Optional
