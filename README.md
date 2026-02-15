@@ -11,7 +11,7 @@
 <img src="https://img.shields.io/github/forks/themastervg/mrvg-cinematic-stream-overlay?style=for-the-badge&color=0ea5e9"/>
 <img src="https://komarev.com/ghpvc/?username=themastervg&repo=mrvg-cinematic-stream-overlay&label=Visitors&color=22d3ee&style=for-the-badge"/>
 <img src="https://img.shields.io/github/contributors/themastervg/mrvg-cinematic-stream-overlay?style=for-the-badge&color=22d3ee&label=Contributors"/>
-
+<img src="https://img.shields.io/badge/License-MRVG%20Creator%20License-22d3ee?style=for-the-badge"/>
 </p>
 
 ---
