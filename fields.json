@@ -1,0 +1,111 @@
+{
+  "channelName": {
+    "type": "text",
+    "label": "Channel Name",
+    "value": "MR VG GAMES"
+  },
+  "glowTheme": {
+    "type": "dropdown",
+    "label": "Glow Theme",
+    "value": "cyan",
+    "options": {
+      "cyan": "Cyan",
+      "purple": "Purple",
+      "green": "Green",
+      "gold": "Gold"
+    }
+  },
+  "enableScroll": {
+    "type": "dropdown",
+    "label": "Enable Scroll Animation",
+    "value": "yes",
+    "options": {
+      "yes": "Yes",
+      "no": "No"
+    }
+  },
+  "autoTexts": {
+    "type": "text",
+    "label": "Automation Messages (Use | To Separate, :: For Custom Delay)",
+    "value": "Abhi Like Karo | Sub Karo Bhai | Tips Se Support Kare"
+  },
+  "defaultPause": {
+    "type": "number",
+    "label": "Default Pause After Message (Milliseconds)",
+    "value": 1500,
+    "min": 500,
+    "step": 100
+  },
+  "priorityText": {
+    "type": "text",
+    "label": "Priority Message (Optional)",
+    "value": ""
+  },
+  "priorityDelay": {
+    "type": "number",
+    "label": "Priority Pause (Milliseconds)",
+    "value": 2000,
+    "min": 500,
+    "step": 100
+  },
+  "priorityRepeats": {
+    "type": "number",
+    "label": "Priority Repeat Count",
+    "value": 2,
+    "min": 1
+  },
+  "maxSubs": {
+    "type": "number",
+    "label": "How Many Recent Subs To Store",
+    "value": 4,
+    "min": 1
+  },
+  "speedSub": {
+    "type": "number",
+    "label": "Recent Sub Scroll Duration (Seconds)",
+    "value": 6,
+    "min": 3
+  },
+  "maxTips": {
+    "type": "number",
+    "label": "How Many Recent Tips To Store",
+    "value": 3,
+    "min": 1
+  },
+  "speedTop": {
+    "type": "number",
+    "label": "Top Tip Scroll Duration (Seconds)",
+    "value": 6,
+    "min": 3
+  },
+  "speedTip": {
+    "type": "number",
+    "label": "Recent Tip Scroll Duration (Seconds)",
+    "value": 6,
+    "min": 3
+  },
+  "speedMsg": {
+    "type": "number",
+    "label": "Automation Message Scroll Duration (Seconds)",
+    "value": 7,
+    "min": 3
+  },
+  "subsFontSize": {
+    "type": "number",
+    "label": "Recent Subs Text Size (px)",
+    "value": 16,
+    "min": 10
+  },
+  "tipsFontSize": {
+    "type": "number",
+    "label": "Recent Tips Text Size (px)",
+    "value": 16,
+    "min": 10
+  },
+  "titlesFontSize": {
+    "type": "number",
+    "label": "Titles Text Size (px)",
+    "value": 12,
+    "min": 8
+  }
+}

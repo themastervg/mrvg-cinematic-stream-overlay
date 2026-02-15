@@ -1,0 +1,34 @@
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Inter:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+<div class="widget-container">
+  <div id="bar">
+
+    <div class="box subBox">
+      <div class="boxtitle">RECENT SUBS</div>
+      <div class="field"><div id="subField"></div></div>
+    </div>
+
+    <div class="sepIcon"></div>
+
+    <div class="box centerBox">
+      <div class="channelWrap">
+        <div id="msgField" class="msgLayer"></div>
+        <div id="channelName" class="nameLayer glowText">MR VG GAMES</div>
+      </div>
+    </div>
+
+    <div class="sepIcon"></div>
+
+    <div class="box tipBox">
+      <div class="mini">
+        <span class="boxtitle">TOP TIP</span>
+        <div class="field small"><div id="topField"></div></div>
+      </div>
+      <div class="mini">
+        <span class="boxtitle">RECENT TIPS</span>
+        <div class="field small"><div id="tipField"></div></div>
+      </div>
+    </div>
+
+  </div>
+</div>

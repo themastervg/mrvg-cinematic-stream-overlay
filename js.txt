@@ -1,0 +1,262 @@
+let currency="INR"
+
+let subs=[]
+let tips=[]
+let topTip={name:"",amount:0}
+
+let msgs=[]
+let si=0,ti=0,mi=0
+
+let enableScroll=true
+
+let speedSub=6
+let speedMsg=7
+let speedTop=6
+let speedTip=6
+
+let maxSubs=4
+let maxTips=3
+
+let defaultPause=1500
+
+let priorityMessage=null
+let priorityRepeats=0
+
+/* ===================== HELPERS ===================== */
+
+function clean(n){
+  return (n||"").replace(/^@/,"")
+}
+
+function fmt(a){
+  return Number(a).toLocaleString("en-IN",{
+    style:"currency",
+    currency:currency,
+    maximumFractionDigits:0
+  })
+}
+
+/* ===================== CHANNEL NAME FIT ===================== */
+
+function fitName(){
+  const el=document.getElementById("channelName")
+  if(!el) return
+  let size=30
+  el.style.fontSize=size+"px"
+  while(el.offsetWidth>260 && size>16){
+    size--
+    el.style.fontSize=size+"px"
+  }
+}
+
+/* ===================== THEME ===================== */
+
+function setTheme(name){
+  const themes={
+    cyan:["#22d3ee","rgba(34,211,238,.35)"],
+    purple:["#a855f7","rgba(168,85,247,.35)"],
+    green:["#22c55e","rgba(34,197,94,.35)"],
+    gold:["#facc15","rgba(250,204,21,.35)"]
+  }
+  const t=themes[name]||themes.cyan
+  document.documentElement.style.setProperty("--glow",t[0])
+  document.documentElement.style.setProperty("--glowSoft",t[1])
+}
+
+/* ===================== SCROLL ENGINE ===================== */
+
+function oneScroll(el,text,sec){
+  if(!el) return
+  el.classList.remove("scrollOne")
+  el.innerHTML=text
+  el.style.animationDuration=sec+"s"
+  void el.offsetWidth
+  if(enableScroll) el.classList.add("scrollOne")
+}
+
+/* ===================== MESSAGE PARSER ===================== */
+/* Format: Text::delay */
+
+function parseMessages(raw){
+  return raw.split("|").map(m=>{
+    const parts=m.split("::")
+    return {
+      text:parts[0].trim(),
+      delay: parts[1] ? Number(parts[1]) : defaultPause
+    }
+  })
+}
+
+/* ===================== DATA PUSHERS ===================== */
+
+function pushSub(n){
+  n=clean(n)
+  if(!n) return
+
+  subs.unshift(n)
+  if(subs.length>maxSubs) subs.pop()
+}
+
+function pushTip(n,a){
+  n=clean(n)
+  a=Number(a)||0
+  if(!n) return
+
+  tips.unshift({name:n,amount:a})
+  if(tips.length>maxTips) tips.pop()
+
+  if(a>topTip.amount){
+    topTip={name:n,amount:a}
+    const el=document.getElementById("topField")
+    if(el){
+      el.classList.add("tipFlash")
+      setTimeout(()=>el.classList.remove("tipFlash"),900)
+    }
+  }
+}
+
+/* ===================== ROTATION LOOPS ===================== */
+
+function loopSubs(){
+  if(!subs.length) return
+  oneScroll(subField,subs[si % subs.length],speedSub)
+  si++
+}
+
+function loopTips(){
+  if(tips.length){
+    const t=tips[ti % tips.length]
+    oneScroll(
+      tipField,
+      t.name+" <span class='amount'>"+fmt(t.amount)+"</span>",
+      speedTip
+    )
+    ti++
+  }
+
+  if(topTip.name){
+    oneScroll(
+      topField,
+      topTip.name+" <span class='amount'>"+fmt(topTip.amount)+"</span>",
+      speedTop
+    )
+  }
+}
+
+/* ===================== MESSAGE PRIORITY SYSTEM ===================== */
+
+function setPriorityMessage(text,delay,repeats){
+  priorityMessage={
+    text:text,
+    delay:delay||defaultPause
+  }
+  priorityRepeats=repeats||1
+}
+
+function showNextMsg(){
+  if(!msgs.length && !priorityMessage) return
+
+  let current
+
+  if(priorityMessage && priorityRepeats>0){
+    current={
+      text:priorityMessage.text,
+      delay:priorityMessage.delay
+    }
+    priorityRepeats--
+  } else {
+    if(priorityMessage && priorityRepeats<=0){
+      priorityMessage=null
+    }
+    current=msgs[mi % msgs.length]
+    mi++
+  }
+
+  oneScroll(msgField,current.text,speedMsg)
+
+  if(enableScroll){
+    msgField.addEventListener("animationend",()=>{
+      setTimeout(showNextMsg,current.delay)
+    },{once:true})
+  }
+}
+
+/* ===================== INTERVALS ===================== */
+
+setInterval(loopSubs,6500)
+setInterval(loopTips,6500)
+
+/* ===================== WIDGET LOAD ===================== */
+
+window.addEventListener("onWidgetLoad",e=>{
+  const f=e.detail.fieldData||{}
+
+  if(e.detail.currency)
+    currency=e.detail.currency.code
+
+  enableScroll=f.enableScroll==="yes"
+
+  speedSub = Number(f.speedSub)||6
+  speedMsg = Number(f.speedMsg)||7
+  speedTop = Number(f.speedTop)||6
+  speedTip = Number(f.speedTip)||6
+
+  maxSubs = Number(f.maxSubs)||4
+  maxTips = Number(f.maxTips)||3
+
+  const subsSize = Number(f.subsFontSize) || 16
+  const tipsSize = Number(f.tipsFontSize) || 16
+  const titleSize = Number(f.titlesFontSize) || 12
+
+  document.querySelectorAll(".subBox .field div").forEach(el=>{
+  el.style.fontSize = subsSize + "px"
+  })
+
+  document.querySelectorAll(".tipBox .field div").forEach(el=>{
+  el.style.fontSize = tipsSize + "px"
+  })
+
+  document.querySelectorAll(".boxtitle").forEach(el=>{
+  el.style.fontSize = titleSize + "px"
+  })
+
+  defaultPause = Number(f.defaultPause)||1500
+
+  setTheme(f.glowTheme)
+
+  msgs=parseMessages(f.autoTexts||"Like | Share | Support")
+
+  if(f.priorityText){
+    setPriorityMessage(
+      f.priorityText,
+      Number(f.priorityDelay)||defaultPause,
+      Number(f.priorityRepeats)||1
+    )
+  }
+
+  channelName.textContent=f.channelName||"MR VG GAMES"
+  fitName()
+
+  const r = (e.detail.recents || []).slice().reverse()
+
+  r.forEach(ev=>{
+  if(ev.type==="subscriber") pushSub(ev.name)
+  if(ev.type==="tip"||ev.type==="superchat") pushTip(ev.name,ev.amount)
+  })
+
+  loopSubs()
+  loopTips()
+  showNextMsg()
+})
+
+/* ===================== LIVE EVENTS ===================== */
+
+window.addEventListener("onEventReceived",e=>{
+  if(!e.detail||!e.detail.event) return
+
+  const L=e.detail.listener.split("-")[0]
+  const ev=e.detail.event
+
+  if(L==="subscriber") pushSub(ev.name)
+  if(L==="tip"||L==="superchat") pushTip(ev.name,ev.amount)
+})

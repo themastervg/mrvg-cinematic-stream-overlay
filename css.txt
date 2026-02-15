@@ -1,0 +1,218 @@
+body{
+  margin:0;
+  overflow:hidden;
+  font-family:'Inter', system-ui, sans-serif;
+}
+
+:root{
+--glow:#60a5fa;
+--glowSoft: rgba(34,211,238,.45);
+}
+
+.widget-container{
+width:100%;
+height:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+#bar{
+width:100%;
+height:64px;
+background:#061821;
+border:2px solid var(--glow);
+border-radius:16px;
+box-shadow:0 0 18px var(--glowSoft);
+display:grid;
+grid-template-columns:420px 12px 1fr 12px 520px; 
+align-items:center;
+padding:6px 14px;
+color:#e6faff;
+font-weight:800;
+}
+
+/* boxes */
+
+.box{
+height:46px;
+background:rgba(0,255,255,.04);
+border-radius:10px;
+display:flex;
+align-items:center;
+gap:10px;
+padding:0 14px;
+}
+
+.tipBox{
+justify-content:flex-end;
+gap:24px;
+}
+
+.mini{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  min-width:230px;
+  justify-content:flex-end;
+}
+
+
+/* titles */
+
+.boxtitle{
+  font-family:'Inter', sans-serif;
+  font-weight:800;
+  letter-spacing:1px;
+  font-size:12px;
+  text-transform:uppercase;
+  color:rgba(103,232,249,.95);
+}
+
+/* separators — centered properly */
+
+.sepIcon{
+width:4px;
+height:28px;
+border-radius:3px;
+background:var(--glow);
+margin:auto;
+animation:sepPulse 2s ease-in-out infinite;
+}
+
+@keyframes sepPulse{
+0%{opacity:.3;transform:scaleY(.7)}
+50%{opacity:1;transform:scaleY(1.15)}
+100%{opacity:.3;transform:scaleY(.7)}
+}
+
+/* center layered */
+
+.centerBox{
+justify-content:center;
+}
+
+.channelWrap{
+position:relative;
+width:100%;
+height:40px;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+}
+
+/* scrolling message behind */
+
+.msgLayer{
+  font-family:'Inter', sans-serif;
+  font-weight:800;
+  letter-spacing:0.6px;
+  font-size:18px;
+  position:absolute;
+  z-index:1;
+  white-space:nowrap;
+  opacity:.95;
+  width:85%;
+  left:7.5%;
+}
+
+/* channel name — NO background block */
+
+.nameLayer{
+  font-family:'Cinzel', serif;
+  position:relative;
+  z-index:2;
+  color:var(--glow);
+  font-weight:900;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  padding:0 14px;
+  background:rgba(6,24,33,0.75); 
+  border-radius:6px;
+}
+
+/* text glow pulse instead of background */
+
+.glowText{
+animation:textGlow 2.8s ease-in-out infinite;
+}
+
+@keyframes textGlow{
+0%{
+  text-shadow:
+    0 0 6px var(--glow),
+    0 0 12px var(--glowSoft);
+}
+50%{
+  text-shadow:
+    0 0 14px var(--glow),
+    0 0 28px var(--glow),
+    0 0 42px var(--glowSoft);
+}
+100%{
+  text-shadow:
+    0 0 6px var(--glow),
+    0 0 12px var(--glowSoft);
+}
+}
+
+
+/* data fields */
+
+.field{
+overflow:hidden;
+height:22px;
+position:relative;
+width:190px;
+font-size:16px;
+}
+
+.field.small{width:150px}
+
+.field div{
+position:absolute;
+white-space:nowrap;
+}
+
+/* amounts */
+
+.amount{
+  color:#facc15;
+  font-weight:800;
+  letter-spacing:0.5px;
+}
+
+/* scroll animation */
+
+.scrollOne{
+animation:onepass linear forwards;
+}
+
+@keyframes onepass{
+from{transform:translateX(110%)}
+to{transform:translateX(-110%)}
+}
+
+/* tip flash */
+
+.tipFlash{
+animation:tipFlash 1s ease;
+}
+
+@keyframes tipFlash{
+0%{filter:brightness(1)}
+50%{filter:brightness(2.2)}
+100%{filter:brightness(1)}
+}
+
+.subBox .field div,
+.tipBox .field div{
+  font-family:'Inter', sans-serif;
+  font-weight:800;   
+  letter-spacing:0.4px;
+}
+.tipBox .field{
+  width:auto;       
+  min-width:120px;
+}
