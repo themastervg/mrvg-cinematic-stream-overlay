@@ -71,18 +71,6 @@ No code editing required.
 
 ---
 
-# ⬇ Download Overlay Files
-
-<p align="center">
-
-<a href="https://github.com/themastervg/mrvg-cinematic-stream-overlay/archive/refs/heads/main.zip">
-<img src="https://img.shields.io/badge/Download%20Overlay-Full%20Package-22d3ee?style=for-the-badge"/>
-</a>
-
-</p>
-
----
-
 # 🛠 Setup Guide
 
 ### 1 — StreamElements
