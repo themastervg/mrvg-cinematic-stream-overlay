@@ -148,6 +148,16 @@ Tip Alert Overlay
 </p>
 
 ---
+## ⭐ Support the Project
+If this overlay helps your stream:
+
+⭐ Star the repository  
+🎥 Subscribe on YouTube  
+📢 Share with streamers  
+
+Your support helps create more free tools.
+
+---
 
 <p align="center">
 Built for streamers who want a cinematic streaming experience
