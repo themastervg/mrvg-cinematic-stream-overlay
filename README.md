@@ -11,7 +11,6 @@
 <img src="https://img.shields.io/github/forks/themastervg/mrvg-cinematic-stream-overlay?style=for-the-badge&color=0ea5e9"/>
 <img src="https://komarev.com/ghpvc/?username=themastervg&repo=mrvg-cinematic-stream-overlay&label=Visitors&color=22d3ee&style=for-the-badge"/>
 <img src="https://img.shields.io/github/contributors/themastervg/mrvg-cinematic-stream-overlay?style=for-the-badge&color=22d3ee&label=Contributors"/>
-
 </p>
 
 ---
@@ -21,9 +20,30 @@
 <p align="center">
 <img src="assets/preview.png" width="92%"/>
 </p>
-
 <p align="center">
 Cinematic animated overlay running inside OBS & StreamElements
+</p>
+
+---
+
+# 👑 Creator
+
+<p align="center">
+<img src="https://avatars.githubusercontent.com/themastervg" width="120" style="border-radius:50%"/>
+<p align="center">
+<a href="https://youtube.com/@mrvggames" target="_blank">
+<img src="https://img.shields.io/badge/YouTube-MR%20VG%20Games-ff0033?style=for-the-badge&logo=youtube&logoColor=white"/>
+</a>
+<a href="https://youtube.com/@mrvggames" target="_blank">
+<img src="https://img.shields.io/youtube/channel/subscribers/UC3HIZWxbnOnP9Pe2TKMRc_A?style=for-the-badge&logo=youtube&logoColor=white&label=Subscribers&color=ff0033"/>
+</a>
+</a>
+<a href="https://github.com/themastervg" target="_blank">
+<img src="https://img.shields.io/badge/GitHub-MRVG%20-22d3ee?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
+<a href="https://streamelements.com/mrvggames/tip" target="_blank">
+<img src="https://img.shields.io/badge/Tip-Support%20MRVG-ffd700?style=for-the-badge&logo=paypal&logoColor=black"/>
+</a>
 </p>
 
 ---
@@ -59,7 +79,6 @@ Lightweight. Fast. Fully customizable.
 - Fully modular layout system  
 - OBS & StreamElements ready  
 - Ultra lightweight (no heavy libraries)  
-
 
 ---
 
@@ -100,27 +119,93 @@ Full visual control from widget panel.
 
 # 🛠 Setup Guide
 
-### 1 — StreamElements
-Open StreamElements dashboard  
-Create → Custom Widget  
+Follow these steps to install the overlay easily.
 
-### 2 — Paste Code
-Add:
-- HTML  
-- CSS  
-- JS  
-- Fields JSON  
+---
 
-### 3 — Resolution
-Set widget resolution:
+## 1️⃣ Create Widget (StreamElements)
+
+1. Open your **StreamElements Dashboard**  
+2. Go to **Streaming Tools → Overlays**  
+3. Click **New Overlay** or open an existing one  
+4. Click **Add Widget → Custom → Custom Widget**
+
+---
+
+## 2️⃣ Paste Overlay Code
+
+Inside the Custom Widget editor, paste each file in correct section:
+
+- HTML → paste into **HTML tab**
+- CSS → paste into **CSS tab**
+- JS → paste into **JavaScript tab**
+- Fields JSON → paste into **Fields tab**
+
+After pasting all code → click **Save**
+
+---
+
+## 3️⃣ Widget Resolution
+
+Recommended resolution:
+
 ```
-1920x1080
+1920 x 1080
 ```
 
-### 4 — OBS
-Add widget URL as browser source.
+This is best for:
+- OBS streaming
+- YouTube live
+- Full HD overlays
 
-Done.
+You can adjust resolution according to your display or canvas size.
+
+Example:
+- 1600x900
+- 1280x720
+- Ultrawide supported
+
+Just match your OBS canvas resolution.
+
+---
+
+## 4️⃣ Add Overlay in OBS
+
+1. Copy widget **Overlay URL** from StreamElements  
+2. Open OBS  
+3. Add → **Browser Source**  
+4. Paste overlay URL  
+5. Set width & height:
+
+```
+Width: 1920  
+Height: 1080
+```
+
+Click OK.
+
+---
+
+## 5️⃣ Customize from Widget Settings
+
+Open widget settings and edit:
+
+- Channel name  
+- Subscriber goal  
+- Automation messages  
+- Font styles  
+- Theme color  
+- Scroll speed  
+- Tips & subs display  
+
+All settings available in panel.  
+No coding needed after setup.
+
+---
+
+## ✅ Done
+
+Your cinematic overlay is now live and ready.
 
 ---
 
@@ -130,21 +215,24 @@ Done.
 - Ultra lightweight  
 - Low CPU usage  
 - Smooth 60fps animations  
-- Optimized for streaming  
+- Optimized for long streams  
 
 ---
+
 # 🧩 Advanced Overlay System
 
 Built with a modular layout engine for maximum flexibility.
 
-- Separate automation ticker section  
-- Independent data fields  
+- Dedicated automation ticker  
+- Subscriber goal system  
+- Multi-font support  
+- Theme color engine  
 - Smart overflow handling  
 - Zero layout break design  
 - Clean grid alignment  
-- Theme reactive components  
+- Real-time tip currency display  
 
-Designed for long streaming sessions with stable performance.
+Designed for professional streaming sessions.
 
 ---
 
@@ -159,29 +247,6 @@ Twitch Overlay Bar
 Animated Stream Ticker  
 Subscriber Alert Bar  
 Tip Alert Overlay  
-
----
-
-# 👑 Creator
-
-<p align="center">
-<img src="https://avatars.githubusercontent.com/themastervg" width="120" style="border-radius:50%"/>
-
-<p align="center">
-<a href="https://youtube.com/@mrvggames" target="_blank">
-<img src="https://img.shields.io/badge/YouTube-MR%20VG%20Games-ff0033?style=for-the-badge&logo=youtube&logoColor=white"/>
-</a>
-<a href="https://youtube.com/@mrvggames" target="_blank">
-<img src="https://img.shields.io/youtube/channel/subscribers/UC3HIZWxbnOnP9Pe2TKMRc_A?style=for-the-badge&logo=youtube&logoColor=white&label=Subscribers&color=ff0033"/>
-</a>
-</a>
-<a href="https://github.com/themastervg" target="_blank">
-<img src="https://img.shields.io/badge/GitHub-MRVG%20-22d3ee?style=for-the-badge&logo=github&logoColor=white"/>
-</a>
-<a href="https://streamelements.com/mrvggames/tip" target="_blank">
-<img src="https://img.shields.io/badge/Tip-Support%20MRVG-ffd700?style=for-the-badge&logo=paypal&logoColor=black"/>
-</a>
-</p>
 
 ---
 
