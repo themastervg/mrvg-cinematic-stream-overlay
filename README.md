@@ -41,33 +41,60 @@ Lightweight. Fast. Fully customizable.
 # ✨ Premium Features
 
 - Cinematic glowing channel name  
+- Real-time subscriber goal system  
 - Recent subscriber rotation  
 - Top tip highlight system  
-- Automation message rotation  
-- Priority message override  
-- Adjustable scroll speed  
-- Dynamic font shrink  
-- Cyan glow theme system  
-- Animated separators  
+- Dedicated automation message ticker  
+- Priority message override system  
+- Adjustable scroll speed controls  
+- Advanced font control system  
+- Separate fonts for all sections  
+- Channel name font selector  
+- Sub goal font selector  
+- Automation text font selector  
+- Tips & subs font control  
+- Dynamic font resize system  
+- Custom theme color engine  
+- Animated glow separators  
+- Fully modular layout system  
 - OBS & StreamElements ready  
-- Zero heavy libraries  
+- Ultra lightweight (no heavy libraries)  
+
 
 ---
 
-# 🎛 Full Custom Control
+# 🎛 Full Custom Control Panel
 
-Everything editable from StreamElements widget settings:
+Everything customizable directly from StreamElements widget settings:
 
+### Text Controls
 - Channel name  
 - Auto messages  
-- Scroll speed  
-- Recent subs limit  
-- Tip display system  
-- Theme color  
-- Priority text  
-- Pause timing  
+- Priority message  
+- Subscriber goal  
 
-No code editing required.
+### Font Controls
+- Channel name font  
+- Sub goal font  
+- Automation text font  
+- Recent subs font  
+- Tips font  
+- Titles font  
+
+### Speed Controls
+- Message scroll speed  
+- Tip scroll speed  
+- Sub scroll speed  
+- Pause duration  
+
+### Layout Controls
+- Theme color  
+- Glow style  
+- Data limits  
+- Spacing & sizing  
+
+No code editing required.  
+Full visual control from widget panel.
 
 ---
 
@@ -106,6 +133,20 @@ Done.
 - Optimized for streaming  
 
 ---
+# 🧩 Advanced Overlay System
+
+Built with a modular layout engine for maximum flexibility.
+
+- Separate automation ticker section  
+- Independent data fields  
+- Smart overflow handling  
+- Zero layout break design  
+- Clean grid alignment  
+- Theme reactive components  
+
+Designed for long streaming sessions with stable performance.
+
+---
 
 # 🔍 Keywords
 
@@ -136,6 +177,9 @@ Tip Alert Overlay
 </a>
 <a href="https://github.com/themastervg" target="_blank">
 <img src="https://img.shields.io/badge/GitHub-MRVG%20-22d3ee?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
+<a href="https://streamelements.com/mrvggames/tip" target="_blank">
+<img src="https://img.shields.io/badge/Tip-Support%20MRVG-ffd700?style=for-the-badge&logo=paypal&logoColor=black"/>
 </a>
 </p>
 

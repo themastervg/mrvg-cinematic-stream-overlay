@@ -43,5 +43,14 @@
   "maxTips": 3,
   "subsFontSize": 16,
   "tipsFontSize": 16,
-  "titlesFontSize": 16
+  "titlesFontSize": 16,
+  "customHex": "",
+  "subGoalTarget": 100,
+  "startCount": 97,
+  "fontChannel": "Sora",
+  "fontSubs": "Sora",
+  "fontTips": "Sora",
+  "fontTitles": "Sora",
+  "fontSubGoal": "Sora",
+  "fontAuto": "Sora"
 }

@@ -4,6 +4,108 @@
     "label": "Channel Name",
     "value": "MR VG GAMES"
   },
+  "fontChannel": {
+    "type": "dropdown",
+    "label": "Channel Name Font",
+    "value": "Sora",
+    "options": {
+      "Sora": "Sora",
+      "Poppins": "Poppins",
+      "Orbitron": "Orbitron",
+      "Rajdhani": "Rajdhani",
+      "Cinzel": "Cinzel",
+      "Inter": "Inter",
+      "Bebas Neue": "Bebas Neue",
+      "Exo 2": "Exo 2",
+      "Montserrat": "Montserrat",
+      "Audiowide": "Audiowide"
+    }
+  },
+  "fontSubs": {
+    "type": "dropdown",
+    "label": "Recent Subs Font",
+    "value": "Inter",
+    "options": {
+      "Sora": "Sora",
+      "Poppins": "Poppins",
+      "Orbitron": "Orbitron",
+      "Rajdhani": "Rajdhani",
+      "Cinzel": "Cinzel",
+      "Inter": "Inter",
+      "Bebas Neue": "Bebas Neue",
+      "Exo 2": "Exo 2",
+      "Montserrat": "Montserrat",
+      "Audiowide": "Audiowide"
+    }
+  },
+  "fontTips": {
+    "type": "dropdown",
+    "label": "Tips Font",
+    "value": "Inter",
+    "options": {
+      "Sora": "Sora",
+      "Poppins": "Poppins",
+      "Orbitron": "Orbitron",
+      "Rajdhani": "Rajdhani",
+      "Cinzel": "Cinzel",
+      "Inter": "Inter",
+      "Bebas Neue": "Bebas Neue",
+      "Exo 2": "Exo 2",
+      "Montserrat": "Montserrat",
+      "Audiowide": "Audiowide"
+    }
+  },
+  "fontTitles": {
+    "type": "dropdown",
+    "label": "Titles Font (RECENT SUBS / TIPS)",
+    "value": "Inter",
+    "options": {
+      "Sora": "Sora",
+      "Poppins": "Poppins",
+      "Orbitron": "Orbitron",
+      "Rajdhani": "Rajdhani",
+      "Cinzel": "Cinzel",
+      "Inter": "Inter",
+      "Bebas Neue": "Bebas Neue",
+      "Exo 2": "Exo 2",
+      "Montserrat": "Montserrat",
+      "Audiowide": "Audiowide"
+    }
+  },
+  "fontSubGoal": {
+    "type": "dropdown",
+    "label": "Sub Goal Font",
+    "value": "Inter",
+    "options": {
+      "Sora": "Sora",
+      "Poppins": "Poppins",
+      "Orbitron": "Orbitron",
+      "Rajdhani": "Rajdhani",
+      "Cinzel": "Cinzel",
+      "Inter": "Inter",
+      "Bebas Neue": "Bebas Neue",
+      "Exo 2": "Exo 2",
+      "Montserrat": "Montserrat",
+      "Audiowide": "Audiowide"
+    }
+  },
+  "fontAuto": {
+    "type": "dropdown",
+    "label": "Automation Text Font",
+    "value": "Inter",
+    "options": {
+      "Sora": "Sora",
+      "Poppins": "Poppins",
+      "Orbitron": "Orbitron",
+      "Rajdhani": "Rajdhani",
+      "Cinzel": "Cinzel",
+      "Inter": "Inter",
+      "Bebas Neue": "Bebas Neue",
+      "Exo 2": "Exo 2",
+      "Montserrat": "Montserrat",
+      "Audiowide": "Audiowide"
+    }
+  },
   "glowTheme": {
     "type": "dropdown",
     "label": "Glow Theme",
@@ -14,6 +116,11 @@
       "green": "Green",
       "gold": "Gold"
     }
+  },
+  "customHex": {
+    "type": "text",
+    "label": "Custom HEX Theme Color (#00eaff)",
+    "value": ""
   },
   "enableScroll": {
     "type": "dropdown",
@@ -28,6 +135,16 @@
     "type": "text",
     "label": "Automation Messages (Use | To Separate, :: For Custom Delay)",
     "value": "Abhi Like Karo | Sub Karo Bhai | Tips Se Support Kare"
+  },
+  "subGoalTarget": {
+    "type": "number",
+    "label": "Subscriber Goal Target",
+    "value": 500
+  },
+  "startCount": {
+    "type": "number",
+    "label": "Starting Sub Count",
+    "value": 0
   },
   "defaultPause": {
     "type": "number",
