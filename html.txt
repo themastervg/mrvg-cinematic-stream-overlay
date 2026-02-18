@@ -1,4 +1,4 @@
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Inter:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Inter:wght@600;700;800&family=Sora:wght@600;700;800&family=Poppins:wght@600;700;800&family=Orbitron:wght@600;700;800&family=Rajdhani:wght@600;700;800&family=Bebas+Neue&family=Exo+2:wght@600;700;800&family=Montserrat:wght@600;700;800&family=Audiowide&display=swap" rel="stylesheet">
 
 <div class="widget-container">
   <div id="bar">
@@ -11,10 +11,25 @@
     <div class="sepIcon"></div>
 
     <div class="box centerBox">
-      <div class="channelWrap">
-        <div id="msgField" class="msgLayer"></div>
-        <div id="channelName" class="nameLayer glowText">MR VG GAMES</div>
+
+      <div class="centerGrid">
+
+        <div class="goalArea">
+          <div id="subGoalBox" class="subGoalBox">SUB GOAL: 0 / 0</div>
+        </div>
+
+        <div class="nameArea">
+          <div id="channelName" class="nameLayer glowText">MR VG GAMES</div>
+        </div>
+
+        <div class="autoArea">
+          <div class="field autoField">
+            <div id="msgField"></div>
+          </div>
+        </div>
+
       </div>
+
     </div>
 
     <div class="sepIcon"></div>
