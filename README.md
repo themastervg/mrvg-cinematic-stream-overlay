@@ -100,27 +100,99 @@ Full visual control from widget panel.
 
 # 🛠 Setup Guide
 
-### 1 — StreamElements
-Open StreamElements dashboard  
-Create → Custom Widget  
+Follow these steps to install the overlay correctly in StreamElements and OBS.
 
-### 2 — Paste Code
-Add:
-- HTML  
-- CSS  
-- JS  
-- Fields JSON  
+---
 
-### 3 — Resolution
-Set widget resolution:
+## 1️⃣ Create Custom Widget (StreamElements)
+
+1. Open your **StreamElements Dashboard**  
+2. Go to **Streaming Tools → Overlays**  
+3. Click **New Overlay** (or open an existing overlay)  
+4. Click **Add Widget → Custom → Custom Widget**
+
+---
+
+## 2️⃣ Add Overlay Code
+
+Inside the Custom Widget editor:
+
+Paste the following in their correct tabs:
+
+- HTML → HTML section  
+- CSS → CSS section  
+- JS → JavaScript section  
+- Fields JSON → Fields section  
+
+Click **Done → Save**
+
+---
+
+## 3️⃣ Customize Widget Settings
+
+After saving, open widget settings and customize:
+
+- Channel name  
+- Subscriber goal  
+- Automation messages  
+- Theme color  
+- Font styles (all sections supported)  
+- Scroll speeds & limits  
+
+Everything can be edited visually — no coding required.
+
+---
+
+## 4️⃣ Set Resolution
+
+Recommended widget resolution:
+
 ```
-1920x1080
+1920 x 1080
 ```
 
-### 4 — OBS
-Add widget URL as browser source.
+If using a different canvas size in OBS, match your base resolution.
 
-Done.
+---
+
+## 5️⃣ Add Overlay to OBS
+
+1. Copy your **Overlay URL** from StreamElements  
+2. Open OBS  
+3. Click **Add Source → Browser Source**  
+4. Paste the overlay URL  
+5. Set width & height:
+
+```
+Width: 1920  
+Height: 1080
+```
+
+Click **OK**
+
+---
+
+## ✅ Done
+
+Your cinematic overlay is now live and fully customizable.
+
+---
+
+## 🔧 Troubleshooting
+
+**Fonts not changing?**  
+Refresh the widget and re-save settings.
+
+**Layout looks broken?**  
+Check overlay resolution and browser source size.
+
+**Changes not updating?**  
+Refresh cache in OBS browser source.
+
+---
+
+Enjoy your premium cinematic streaming overlay 🎬
+
 
 ---
 
